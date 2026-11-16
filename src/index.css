@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --zepp-primary: #1769E8;
+    --zepp-secondary: #287BFA;
+    --zepp-electric: #125DEB;
+    --zepp-light-blue: #DCEAFF;
+    --zepp-very-light-blue: #EDF4FF;
+    --zepp-bg-canvas: #F8FAFF;
+    --zepp-navy: #142443;
+    --zepp-text-primary: #1C2B45;
+    --zepp-text-secondary: #71819C;
+    --zepp-text-muted: #98A6BA;
+    --zepp-glass-bg: rgba(255, 255, 255, 0.72);
+    --zepp-glass-border: rgba(255, 255, 255, 0.85);
+    --zepp-glass-shadow: 0 12px 32px -8px rgba(20, 36, 67, 0.08), 0 2px 6px -1px rgba(23, 105, 232, 0.05);
+    --zepp-success: #20A574;
+    --zepp-warning: #EBAA43;
+    --zepp-error: #E55353;
+  }
+
+  .dark {
+    --zepp-bg-canvas: #0A1324;
+    --zepp-text-primary: #F0F5FF;
+    --zepp-text-secondary: #A6B6D0;
+    --zepp-text-muted: #6F82A3;
+    --zepp-glass-bg: rgba(17, 29, 54, 0.72);
+    --zepp-glass-border: rgba(120, 165, 245, 0.16);
+    --zepp-glass-shadow: 0 14px 36px -10px rgba(3, 8, 20, 0.55), 0 1px 4px rgba(40, 123, 250, 0.12);
+  }
+
+  html {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--zepp-text-primary);
+    background-color: var(--zepp-bg-canvas);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  body {
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+}
+
+/* Soft icy-blue ambient canvas matching Zepp visual direction */
+.zepp-ambient-canvas {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(220, 234, 255, 0.92) 0%, rgba(220, 234, 255, 0) 42%),
+    radial-gradient(circle at 88% 22%, rgba(40, 123, 250, 0.12) 0%, rgba(40, 123, 250, 0) 38%),
+    radial-gradient(circle at 75% 86%, rgba(210, 228, 255, 0.8) 0%, rgba(210, 228, 255, 0) 45%),
+    linear-gradient(160deg, #F8FAFF 0%, #EDF4FF 55%, #F4F8FF 100%);
+}
+
+.dark .zepp-ambient-canvas {
+  background:
+    radial-gradient(circle at 14% 12%, rgba(23, 105, 232, 0.22) 0%, rgba(23, 105, 232, 0) 45%),
+    radial-gradient(circle at 88% 24%, rgba(40, 123, 250, 0.16) 0%, rgba(40, 123, 250, 0) 40%),
+    radial-gradient(circle at 60% 90%, rgba(18, 93, 235, 0.14) 0%, rgba(18, 93, 235, 0) 50%),
+    linear-gradient(165deg, #081020 0%, #0D1930 55%, #091224 100%);
+}
+
+.zepp-glass {
+  background: var(--zepp-glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--zepp-glass-border);
+  box-shadow: var(--zepp-glass-shadow);
+}
+
+.zepp-glass-subtle {
+  background: rgba(255, 255, 255, 0.54);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+}
+
+.dark .zepp-glass-subtle {
+  background: rgba(20, 35, 65, 0.56);
+  border: 1px solid rgba(130, 175, 255, 0.14);
+}
+
+.zepp-neu-input {
+  background: rgba(240, 245, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 2px 5px rgba(20, 36, 67, 0.05), 0 2px 6px rgba(255, 255, 255, 0.7);
+}
+
+.dark .zepp-neu-input {
+  background: rgba(13, 24, 47, 0.78);
+  border: 1px solid rgba(120, 165, 245, 0.18);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.zepp-btn-primary {
+  background: linear-gradient(135deg, #287BFA 0%, #1557D8 100%);
+  color: #FFFFFF;
+  box-shadow: 0 10px 24px -6px rgba(23, 105, 232, 0.48), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 160ms cubic-bezier(0.16, 1, 0.3, 1), filter 160ms ease;
+}
+
+.zepp-btn-primary:hover:not(:disabled) {
+  filter: brightness(1.05);
+  box-shadow: 0 14px 28px -6px rgba(23, 105, 232, 0.56), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+}
+
+.zepp-btn-primary:active:not(:disabled) {
+  transform: scale(0.985);
+}
+
+.zepp-btn-secondary {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(23, 105, 232, 0.18);
+  color: #142443;
+  box-shadow: 0 4px 12px rgba(20, 36, 67, 0.04);
+  transition: background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.dark .zepp-btn-secondary {
+  background: rgba(25, 43, 78, 0.76);
+  border: 1px solid rgba(120, 170, 255, 0.22);
+  color: #EBF2FF;
+}
+
+.zepp-btn-secondary:hover:not(:disabled) {
+  border-color: rgba(23, 105, 232, 0.42);
+  background: rgba(237, 244, 255, 0.95);
+}
+
+.dark .zepp-btn-secondary:hover:not(:disabled) {
+  background: rgba(33, 56, 100, 0.88);
+  border-color: rgba(120, 170, 255, 0.4);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

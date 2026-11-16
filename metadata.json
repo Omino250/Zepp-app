@@ -1,0 +1,6 @@
+{
+  "name": "Zepp",
+  "description": "Zepp — Connect. Discover. Experience. Kenya's integrated social networking, creator, business, and events ecosystem.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

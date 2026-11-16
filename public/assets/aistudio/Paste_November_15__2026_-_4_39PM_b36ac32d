@@ -1,0 +1,1250 @@
+# MASTER PRODUCT DESIGN AND DEVELOPMENT PROMPT: ZEPP
+
+## ROLE AND EXPECTATIONS
+
+Act as a multidisciplinary senior product development team consisting of:
+
+1. A principal product architect with experience designing large-scale digital platforms.
+2. A senior UI/UX designer specialising in premium consumer applications.
+3. A senior frontend engineer specialising in React and TypeScript.
+4. A backend architect specialising in scalable web applications.
+5. A product strategist specialising in social networking, digital communities and social commerce.
+6. A quality assurance engineer responsible for functionality, usability, accessibility and responsive testing.
+
+Your assignment is to design and develop ZEPP, a comprehensive, premium-quality social networking web application.
+
+Do not approach this as a simple website generation exercise.
+
+Think through the product architecture, user journeys, interface hierarchy, reusable components, data structures, interactions and overall user experience before implementation.
+
+The result must be a convincing, interactive and professionally designed application prototype that can be presented to potential partners, investors and stakeholders.
+
+Do not produce a static collection of attractive screens.
+
+Build a coherent application in which the major features connect logically and the primary interactions actually work.
+
+---
+
+# PART 1: PRODUCT DEFINITION
+
+## 1.1 Product name
+
+ZEPP
+
+Tagline:
+
+CONNECT. DISCOVER. EXPERIENCE.
+
+Use ZEPP consistently throughout the application.
+
+## 1.2 Product vision
+
+Zepp is an integrated digital platform designed to bring together individuals, content creators, businesses and event organisers in one interconnected ecosystem.
+
+The platform combines:
+
+- Social networking.
+- Photo and video sharing.
+- Short-form video content.
+- Stories and temporary updates.
+- Personal communication.
+- Content discovery.
+- Business profiles and promotion.
+- Digital advertising.
+- Event discovery and promotion.
+- Event ticketing and booking.
+- Community engagement.
+
+Zepp should provide a unified experience where users can connect socially, discover content, explore businesses, promote products, discover experiences and interact with communities.
+
+## 1.3 Target audience
+
+The application must support a broad audience:
+
+A. Individual users:
+People who want to connect with friends, share content, follow creators and discover interesting things.
+
+B. Content creators:
+People who create videos, photographs, educational content, entertainment and lifestyle content.
+
+C. Businesses:
+Small businesses, medium-sized companies, brands, retailers, service providers and entrepreneurs.
+
+D. Event organisers:
+Individuals and organisations promoting concerts, festivals, conferences, parties, sporting activities and other experiences.
+
+## 1.4 Geographic focus
+
+Initial market: Kenya.
+
+Use realistic Kenyan demonstration data, including:
+
+- Nairobi.
+- Mombasa.
+- Kisumu.
+- Nakuru.
+- Eldoret.
+- Kakamega.
+
+Currency: Kenyan Shilling (KES).
+
+Use Kenya's familiar business and social context in sample content.
+
+Design the architecture so that future international expansion is possible.
+
+---
+
+# PART 2: BRAND IDENTITY AND VISUAL DESIGN SYSTEM
+
+THIS SECTION IS EXTREMELY IMPORTANT.
+
+Two reference images have been supplied:
+
+REFERENCE IMAGE 1: Official Zepp logo.
+
+REFERENCE IMAGE 2: Preferred login interface and visual design direction.
+
+Study both supplied images before creating the interface.
+
+They must guide the entire visual design process.
+
+## 2.1 Official logo requirements
+
+The supplied Zepp bird logo is the official brand asset.
+
+Requirements:
+
+- Use the actual uploaded logo.
+- Do not redesign the bird.
+- Do not replace it with a generated bird.
+- Do not distort its proportions.
+- Do not change its original identity.
+- Preserve its original blue colour treatment.
+- Maintain sufficient clear space around it.
+- Use appropriate image sizing and object-fit settings.
+
+Create different placements where appropriate:
+
+1. Full logo with Zepp lettering for login, registration and branding.
+2. Bird symbol for compact navigation and application icons, using an available original crop or asset.
+3. A small logo treatment for loading and empty states.
+
+Do not fabricate alternative logo variations.
+
+If the uploaded image is not available as a usable image asset, clearly identify the issue instead of silently substituting another logo.
+
+## 2.2 Design philosophy
+
+Use a premium Glassmorphism and subtle Neumorphism design system.
+
+The interface should resemble the supplied login reference.
+
+The visual personality should be:
+
+- Premium.
+- Elegant.
+- Minimal.
+- Modern.
+- Light.
+- Sophisticated.
+- Friendly.
+- Technologically advanced.
+
+Avoid generic social media dashboard templates.
+
+Do not use a predominantly black interface.
+
+The default application appearance must be light.
+
+## 2.3 Colour system
+
+Use the following colour palette:
+
+Primary blue: #1769E8
+
+Secondary blue: #287BFA
+
+Electric blue: #125DEB
+
+Light blue: #DCEAFF
+
+Very light blue: #EDF4FF
+
+Background white: #F8FAFF
+
+Dark navy: #142443
+
+Primary text: #1C2B45
+
+Secondary text: #71819C
+
+Muted text: #98A6BA
+
+Borders: rgba(255,255,255,0.8)
+
+Glass surfaces: rgba(255,255,255,0.65)
+
+Success: #20A574
+
+Warning: #EBAA43
+
+Error: #E55353
+
+Use gradients carefully.
+
+Suggested primary gradient:
+
+linear-gradient(135deg, #287BFA 0%, #1557D8 100%)
+
+## 2.4 Background treatments
+
+Create a consistent background system inspired by the supplied login screen.
+
+Include:
+
+- Soft icy-blue gradients.
+- White-to-blue transitions.
+- Subtle blurred circular shapes.
+- Abstract curved decorative elements.
+- Very subtle ambient lighting.
+- Gentle gradient reflections.
+
+The background must not compete with the content.
+
+Use CSS-generated decorative shapes where appropriate rather than downloading unnecessary background images.
+
+## 2.5 Glassmorphism components
+
+Create reusable glass components.
+
+Examples:
+
+- Glass navigation panels.
+- Frosted cards.
+- Translucent modal windows.
+- Glass search fields.
+- Floating action buttons.
+- Semi-transparent dropdown menus.
+- Frosted login containers.
+
+Use:
+
+- backdrop-filter: blur().
+- Semi-transparent white backgrounds.
+- Soft borders.
+- Subtle inner highlights.
+- Layered shadows.
+- Rounded corners.
+
+Do not apply glass effects excessively.
+
+Content readability must always take priority.
+
+## 2.6 Buttons
+
+Primary buttons:
+
+- Blue gradient.
+- Rounded corners.
+- Subtle blue shadow.
+- White text.
+- Smooth hover transition.
+- Clear active and disabled states.
+
+Secondary buttons:
+
+- White or translucent backgrounds.
+- Soft blue borders.
+- Dark navy text.
+
+Icon buttons:
+
+- Consistent sizing.
+- Rounded backgrounds.
+- Clear hover feedback.
+
+## 2.7 Typography
+
+Use Inter or a similarly modern sans-serif font.
+
+Typography hierarchy:
+
+- Strong headings.
+- Medium-weight section titles.
+- Readable body text.
+- Muted secondary descriptions.
+- Consistent numerical styling.
+
+Avoid excessive font sizes and unnecessary decorative typography.
+
+## 2.8 Light and dark modes
+
+Implement two appearance modes.
+
+Light mode:
+The default mode, based on the supplied login reference.
+
+Dark mode:
+A sophisticated navy and deep-blue appearance with carefully adapted glass surfaces.
+
+Include an appearance toggle in settings.
+
+Persist the selected preference.
+
+---
+
+# PART 3: APPLICATION ARCHITECTURE AND NAVIGATION
+
+Build a complete application shell.
+
+## 3.1 Desktop layout
+
+Use a modern three-column social application layout.
+
+LEFT SIDEBAR:
+
+- Zepp logo.
+- Home.
+- Explore.
+- Create.
+- Events.
+- Messages.
+- Notifications.
+- Saved.
+- Profile.
+- Settings.
+- Account switching.
+
+CENTRAL CONTENT AREA:
+
+Displays the active page.
+
+RIGHT SIDEBAR:
+
+Displays contextual information such as:
+
+- Suggested accounts.
+- Trending topics.
+- Upcoming events.
+- Recommended businesses.
+- Popular creators.
+- Relevant promotional content.
+
+The right sidebar should adapt to the active page.
+
+## 3.2 Mobile layout
+
+Create a dedicated responsive mobile experience.
+
+Use a compact bottom navigation with:
+
+- Home.
+- Explore.
+- Create.
+- Events.
+- Profile.
+
+Messages and notifications should remain accessible through appropriate top-level icons.
+
+Ensure content does not overflow horizontally.
+
+## 3.3 Global navigation behaviour
+
+Navigation must work.
+
+Implement:
+
+- Active page highlighting.
+- Smooth page transitions.
+- Persistent navigation.
+- Search access.
+- Notification access.
+- Messaging access.
+- Responsive navigation behaviour.
+
+Do not leave decorative navigation elements without functionality.
+
+---
+
+# PART 4: AUTHENTICATION AND ONBOARDING
+
+Create a polished authentication experience.
+
+## 4.1 Login screen
+
+Use the uploaded login reference as the primary design reference.
+
+Include:
+
+- Zepp logo.
+- Welcome Back heading.
+- Sign in to continue subtitle.
+- Username or email input.
+- Password input.
+- Password visibility toggle.
+- Remember me checkbox.
+- Forgot password link.
+- Primary blue Login button.
+- Alternative sign-in options.
+- Google sign-in demonstration.
+- Registration link.
+- Appearance toggle.
+
+The login screen should closely reproduce the atmosphere and visual quality of the supplied reference.
+
+Do not introduce unrelated visual styles.
+
+## 4.2 Registration
+
+Create an attractive registration page.
+
+Fields:
+
+- Full name.
+- Username.
+- Email address.
+- Phone number.
+- Password.
+- Confirm password.
+- Date of birth.
+- Country.
+
+Include:
+
+- Terms and privacy acceptance.
+- Password strength feedback.
+- Validation.
+- Registration success state.
+
+## 4.3 Account onboarding
+
+After registration, allow users to choose their account type:
+
+1. Personal account.
+2. Creator account.
+3. Business account.
+4. Event organiser account.
+
+Explain each option clearly.
+
+Support a personal account that can later activate additional professional capabilities.
+
+Do not force users to select a business or creator account just to use the social platform.
+
+## 4.4 Authentication implementation
+
+For the demonstration, provide a functional simulated authentication experience.
+
+Do not present simulated login as secure production authentication.
+
+Structure the application so that real authentication can later be integrated using Firebase Authentication.
+
+---
+
+# PART 5: HOME FEED AND SOCIAL EXPERIENCE
+
+The home feed is one of the most important application screens.
+
+Create an engaging, visually balanced feed.
+
+## 5.1 Feed header
+
+Include:
+
+- Zepp branding.
+- Search.
+- Notifications.
+- Messages.
+- User profile shortcut.
+
+## 5.2 Stories section
+
+Create horizontally scrollable story cards.
+
+Features:
+
+- User profile images.
+- Story rings.
+- Add story option.
+- Story viewing overlay.
+- Next and previous navigation.
+- Story progress indicator.
+- Close button.
+
+Use demonstration stories.
+
+## 5.3 Content feed
+
+Support the following content types:
+
+- Text posts.
+- Single-image posts.
+- Multiple-image posts.
+- Video posts.
+- Short-form videos.
+- Event announcements.
+- Business promotions.
+
+Each post should contain:
+
+- Profile image.
+- Username.
+- Display name.
+- Verification indicator where appropriate.
+- Posting time.
+- Post content.
+- Media.
+- Like count.
+- Comment count.
+- Share action.
+- Save action.
+
+## 5.4 Social interactions
+
+Implement functional:
+
+- Like and unlike.
+- Comment creation.
+- Comment display.
+- Reply demonstrations.
+- Share action.
+- Save and unsave.
+- Follow and unfollow.
+- Post menu.
+- Report post.
+
+Update the interface immediately when an interaction happens.
+
+Use local demonstration state.
+
+## 5.5 Feed organisation
+
+Provide simple feed filters:
+
+- For You.
+- Following.
+- Trending.
+
+Do not create an overly complicated filtering system.
+
+---
+
+# PART 6: EXPLORE AND DISCOVERY
+
+Create a discovery experience that allows users to find content and opportunities.
+
+## 6.1 Search
+
+Include a prominent search field.
+
+Allow searching for:
+
+- People.
+- Usernames.
+- Businesses.
+- Creators.
+- Events.
+- Hashtags.
+- Topics.
+
+Include suggested searches and recent searches.
+
+## 6.2 Discovery categories
+
+Create categories such as:
+
+- Trending.
+- Entertainment.
+- Lifestyle.
+- Technology.
+- Business.
+- Fashion.
+- Sports.
+- Food.
+- Travel.
+- Education.
+- Events.
+
+## 6.3 Explore layout
+
+Use a visually attractive responsive grid.
+
+Include:
+
+- Featured content.
+- Popular creators.
+- Trending videos.
+- Recommended businesses.
+- Upcoming events.
+
+Use realistic demonstration images.
+
+---
+
+# PART 7: CONTENT CREATION STUDIO
+
+Create a dedicated content publishing experience.
+
+## 7.1 Create menu
+
+Users should be able to select:
+
+- Create post.
+- Upload photo.
+- Upload video.
+- Create story.
+- Share event.
+- Publish business promotion.
+
+## 7.2 Post composer
+
+Include:
+
+- Media upload.
+- Text editor.
+- Caption field.
+- Hashtag support.
+- Audience selector.
+- Location field.
+- Preview.
+- Publish button.
+
+Support image previews and video previews where possible.
+
+## 7.3 Publishing functionality
+
+Published demonstration content should appear in the user's profile and the appropriate feed.
+
+Allow users to delete their own demonstration posts.
+
+Do not implement fake upload success when the file has not actually been processed.
+
+---
+
+# PART 8: VIDEO EXPERIENCE
+
+Create a dedicated short-video viewing section.
+
+The experience should be mobile-friendly.
+
+Include:
+
+- Vertical video presentation.
+- Creator information.
+- Captions.
+- Like button.
+- Comments.
+- Share.
+- Save.
+- Follow creator.
+
+Use available sample video assets or suitable demonstration media.
+
+Do not autoplay audio unexpectedly.
+
+Include appropriate controls and accessible playback behaviour.
+
+---
+
+# PART 9: EVENTS AND EXPERIENCES
+
+Build an event discovery and ticketing section.
+
+This section should be fully integrated into the wider Zepp ecosystem.
+
+## 9.1 Event discovery
+
+Create categories:
+
+- Music.
+- Concerts.
+- Nightlife.
+- Festivals.
+- Sports.
+- Business conferences.
+- Education.
+- Food and dining.
+- Travel.
+- Beach activities.
+- Cultural experiences.
+
+## 9.2 Event listings
+
+Each event card should display:
+
+- Event cover image.
+- Event title.
+- Event category.
+- Date.
+- Venue.
+- Location.
+- Ticket starting price.
+- Organiser.
+- Save event action.
+
+## 9.3 Event details
+
+Include:
+
+- Large event cover.
+- Full description.
+- Organiser information.
+- Venue details.
+- Location.
+- Date and time.
+- Ticket categories.
+- Ticket availability.
+- Pricing.
+- Attendee information.
+- Share event.
+- Save event.
+- Book ticket.
+
+## 9.4 Booking
+
+Create a booking journey.
+
+Step 1: Select ticket category.
+
+Step 2: Select quantity.
+
+Step 3: Display price breakdown.
+
+Step 4: Enter attendee information.
+
+Step 5: Proceed to simulated payment.
+
+Step 6: Show booking confirmation.
+
+## 9.5 Digital tickets
+
+Generate a demonstration ticket containing:
+
+- Event name.
+- Booking reference.
+- Attendee name.
+- Ticket category.
+- Date.
+- QR-code-style visual.
+
+Clearly label demonstration tickets as non-redeemable.
+
+## 9.6 Location
+
+Use Kenyan locations in sample event listings.
+
+Provide a map-style location preview where possible.
+
+Do not invent actual geocoding or route information.
+
+---
+
+# PART 10: BUSINESS ECOSYSTEM
+
+Create a dedicated business experience.
+
+## 10.1 Business profiles
+
+Include:
+
+- Business logo.
+- Cover image.
+- Business name.
+- Description.
+- Category.
+- Location.
+- Contact details.
+- Website.
+- Followers.
+- Verification status.
+- Products and services.
+- Promotional posts.
+
+## 10.2 Products and services
+
+Create attractive product cards.
+
+Display:
+
+- Product image.
+- Product name.
+- Price in KES.
+- Business name.
+- Description.
+- Enquiry button.
+
+## 10.3 Business promotions
+
+Allow business accounts to create:
+
+- Promotional posts.
+- Product announcements.
+- Special offers.
+- Campaign posts.
+- Event promotions.
+
+Clearly distinguish sponsored posts from ordinary content.
+
+## 10.4 Business analytics
+
+Create a demonstration dashboard showing:
+
+- Profile visits.
+- Post reach.
+- Engagement.
+- Follower growth.
+- Enquiries.
+- Campaign performance.
+
+Use sample data and label it as demonstration analytics.
+
+---
+
+# PART 11: MESSAGING AND COMMUNICATION
+
+Build a clean messaging interface.
+
+Include:
+
+- Conversation list.
+- Profile images.
+- Contact names.
+- Last message preview.
+- Conversation timestamps.
+- Unread indicators.
+- Search conversations.
+
+Chat screen:
+
+- Message history.
+- Message input.
+- Send button.
+- Message timestamps.
+- Basic text and emoji support.
+- Conversation details.
+
+Implement functional local demonstration messaging.
+
+Do not imply messages are being delivered to real external users.
+
+---
+
+# PART 12: NOTIFICATIONS
+
+Create a notification centre.
+
+Notification types:
+
+- New followers.
+- Likes.
+- Comments.
+- Mentions.
+- Messages.
+- Event reminders.
+- Booking updates.
+- Business interactions.
+
+Include:
+
+- Read and unread states.
+- Mark all as read.
+- Notification timestamps.
+- Navigation to relevant content.
+
+---
+
+# PART 13: USER PROFILE
+
+Create an attractive user profile.
+
+Include:
+
+- Profile image.
+- Cover image.
+- Name.
+- Username.
+- Bio.
+- Location.
+- Followers.
+- Following.
+- Posts.
+- Media grid.
+- Saved content where appropriate.
+- Edit profile.
+
+Include a separate view for personal and professional accounts.
+
+---
+
+# PART 14: ORGANISER AND CREATOR DASHBOARDS
+
+Create dedicated dashboards based on account capabilities.
+
+## Creator dashboard
+
+Include:
+
+- Published content.
+- Followers.
+- Content engagement.
+- Views.
+- Performance charts.
+- Audience insights demonstration.
+
+## Event organiser dashboard
+
+Include:
+
+- Create event.
+- Manage events.
+- Ticket categories.
+- Ticket sales demonstration.
+- Booking statistics.
+- Event performance.
+- Attendee overview.
+
+## Business dashboard
+
+Include:
+
+- Business profile management.
+- Products and services.
+- Promotional campaigns.
+- Enquiries.
+- Performance analytics.
+
+---
+
+# PART 15: SETTINGS AND ACCOUNT MANAGEMENT
+
+Create a complete settings area.
+
+Include:
+
+- Edit profile.
+- Account preferences.
+- Privacy settings.
+- Notification preferences.
+- Appearance settings.
+- Language settings.
+- Password settings.
+- Blocked accounts.
+- Help and support.
+- Terms and conditions.
+- Privacy policy.
+- Logout.
+
+Make privacy and account controls accessible.
+
+---
+
+# PART 16: PRODUCT DATA AND DEMONSTRATION CONTENT
+
+Create a realistic demonstration dataset.
+
+Include at least:
+
+- 12 personal user profiles.
+- 5 creator profiles.
+- 8 business profiles.
+- 8 event listings.
+- 15 social posts.
+- 6 video entries.
+- 8 stories.
+- 8 notification examples.
+- 6 sample conversations.
+
+Use Kenyan names, businesses and locations.
+
+Use realistic but fictional demonstration information.
+
+Do not use actual people's personal information.
+
+Do not falsely label fictional accounts as officially verified.
+
+Use suitable high-quality images.
+
+Avoid repeating the same images throughout the application.
+
+Use a consistent visual content style.
+
+---
+
+# PART 17: TECHNICAL ARCHITECTURE
+
+## 17.1 Technology stack
+
+Use:
+
+- React.
+- TypeScript.
+- Vite where appropriate.
+- Tailwind CSS.
+- Reusable React components.
+- React Router.
+- Lucide icons.
+- A suitable charting library for dashboards.
+
+Use the existing Google AI Studio project environment and its supported dependencies.
+
+Do not unnecessarily replace working project configurations.
+
+## 17.2 Architecture
+
+Organise the code into reusable modules.
+
+Suggested structure:
+
+src/
+  components/
+    layout/
+    navigation/
+    cards/
+    forms/
+    media/
+    modals/
+    common/
+
+  pages/
+    auth/
+    home/
+    explore/
+    create/
+    videos/
+    events/
+    messages/
+    profile/
+    business/
+    settings/
+
+  features/
+    authentication/
+    social/
+    stories/
+    messaging/
+    events/
+    business/
+    notifications/
+
+  data/
+    users/
+    posts/
+    events/
+    businesses/
+
+  hooks/
+
+  services/
+
+  types/
+
+  utils/
+
+  styles/
+
+Keep the code maintainable and avoid placing the entire application inside one component.
+
+## 17.3 State management
+
+Use an appropriate state management strategy.
+
+Persist relevant demonstration data locally.
+
+Ensure that interactions remain consistent when navigating between screens.
+
+Avoid unnecessary duplication of state.
+
+## 17.4 Future backend integration
+
+Design the application so that it can later connect to:
+
+- Firebase Authentication.
+- Cloud Firestore.
+- Firebase Storage.
+- Cloud Functions.
+- M-Pesa Daraja API.
+- Email and notification services.
+
+Do not expose API keys or secret credentials in frontend code.
+
+Do not pretend that backend services are operational when they are not configured.
+
+---
+
+# PART 18: SECURITY, PRIVACY AND TRUST
+
+Even though this is a prototype, account for future production requirements.
+
+Include interface concepts for:
+
+- Account privacy.
+- Content reporting.
+- Blocking users.
+- Moderation.
+- Verification workflows.
+- Secure payment architecture.
+- Protected user information.
+
+Never store real passwords or payment credentials in local storage.
+
+Never expose private information in public profile data.
+
+Clearly separate demonstration functionality from production functionality.
+
+---
+
+# PART 19: RESPONSIVENESS AND ACCESSIBILITY
+
+The application must work across:
+
+- Large desktop monitors.
+- Standard laptops.
+- Tablets.
+- Android phones.
+- iPhones.
+
+Test at different screen widths.
+
+Ensure:
+
+- No horizontal overflow.
+- Readable typography.
+- Appropriate touch targets.
+- Consistent spacing.
+- Accessible form labels.
+- Keyboard navigation.
+- Visible focus indicators.
+- Appropriate colour contrast.
+- Reduced-motion support.
+
+The mobile experience must be deliberately designed, not merely a compressed desktop interface.
+
+---
+
+# PART 20: PERFORMANCE AND USER EXPERIENCE
+
+Implement:
+
+- Lazy loading of images.
+- Appropriate image sizing.
+- Loading skeletons.
+- Empty states.
+- Error states.
+- Success feedback.
+- Confirmation dialogs.
+- Form validation.
+- Responsive media containers.
+- Efficient component rendering.
+
+Use realistic loading and transition behaviour.
+
+Avoid excessive animations.
+
+Prioritise usability and speed.
+
+---
+
+# PART 21: DEVELOPMENT EXECUTION RULES
+
+These requirements are mandatory.
+
+1. First inspect the supplied brand assets and existing project files.
+
+2. Establish the global design system before building individual screens.
+
+3. Build the reusable application shell and navigation.
+
+4. Develop the application in logical modules.
+
+5. Preserve existing working functionality when modifying the project.
+
+6. Do not generate a static mock-up.
+
+7. Do not leave important buttons non-functional.
+
+8. Do not use placeholder links that lead nowhere.
+
+9. Do not create duplicate pages with slightly different styling.
+
+10. Maintain consistent design tokens and reusable components.
+
+11. Do not invent real payment integrations or authentication services.
+
+12. Do not fabricate real-world verification.
+
+13. Use clear demonstration labels wherever sample data or simulated functionality is used.
+
+14. Test the main user journeys after implementation.
+
+15. Fix compilation errors and runtime errors before considering a feature complete.
+
+16. Do not sacrifice mobile usability for desktop aesthetics.
+
+17. Do not remove features simply because implementation is inconvenient.
+
+18. If a feature cannot be fully implemented in the current prototype environment, implement the best honest demonstration possible and document what remains.
+
+---
+
+# PART 22: ACCEPTANCE CRITERIA
+
+The prototype will be considered successful when:
+
+A. Branding:
+The original Zepp logo is correctly displayed and the supplied login reference guides the complete design system.
+
+B. Visual consistency:
+All application sections share the same premium blue-and-white glassmorphism design language.
+
+C. Navigation:
+All primary navigation routes work.
+
+D. Social experience:
+Users can browse demonstration content, like posts, comment, follow accounts and create posts.
+
+E. Discovery:
+Users can search and explore demonstration users, businesses and events.
+
+F. Events:
+Users can inspect events, select tickets and complete a simulated booking.
+
+G. Business:
+Business profiles and promotional dashboards are functional demonstrations.
+
+H. Messaging:
+Users can open conversations and send demonstration messages.
+
+I. Profiles:
+Users can view and edit demonstration profile information.
+
+J. Responsiveness:
+The application works properly on desktop, tablet and mobile.
+
+K. Quality:
+No major broken routes, dead buttons, obvious layout defects or runtime errors.
+
+---
+
+# FINAL INSTRUCTION
+
+Build ZEPP as a cohesive, premium and interactive digital ecosystem.
+
+The design must respect the supplied Zepp logo and the supplied login screen reference.
+
+Prioritise product quality, visual consistency, logical navigation and working interactions.
+
+Do not simply describe how the application could be built.
+
+Actually implement it in the current project.
+
+Begin by inspecting the existing assets and project structure, then establish the design system and application shell before proceeding through the major features.
+
+At the end, provide a concise implementation report listing:
+
+1. Completed modules.
+2. Working interactions.
+3. Demonstration-only functionality.
+4. Any incomplete features.
+5. Any errors that still need attention.
+
+The result should be ready for a live demonstration to stakeholders.
